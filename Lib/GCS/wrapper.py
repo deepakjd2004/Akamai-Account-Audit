@@ -346,14 +346,14 @@ class Wrapper:
 					result = a
 					break
 				else:
-					result = self.getCNAMEv2(str(a))
+					result = self.getCNAME(str(a))
 	
 		except BaseException as e:
 			result = None
 		if result is not None:
 			return str(result)
 		
-		return results
+		return result
 	@functools.lru_cache()
 	def checkIfCDN(self,dnsRecord):
 		result = False
